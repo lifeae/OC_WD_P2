@@ -186,7 +186,8 @@ body {
 }
 
 .recommandations .recommandations-item {
-    width: 50%;
+    width: 45%;
+    margin: 0 5% 0 5%;
 }
 
 .recommandations .recommandations-item h5{
