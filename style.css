@@ -4,19 +4,18 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color:#F5F5F5;
-    color:#212121;
-    font-family: 'Roboto', sans-serif;
-    word-wrap: break-word;
-}
-
 .container {
     display: flex;
     min-height: 100vh;
+    min-width: 100vh;
+    font-family: 'Roboto', sans-serif;
+    word-wrap: break-word;
+    background-color:#F5F5F5;
 }
 
+
+
+/* MEDIA QUERIES */ 
 @media screen and (max-width: 640px) {
     .column {
         min-width: 200px;
@@ -29,6 +28,8 @@ body {
     }
 }
 
+
+
 /* COLUMN */
 .column {
     max-width: 33%;
@@ -38,11 +39,6 @@ body {
     display: flex;
     flex-direction: column;
     font-size: 0.70rem;
-}
-
-.column a {
-    color: #F5F5F5;
-    text-decoration: none;
 }
 
 .column img {
@@ -68,6 +64,11 @@ body {
     margin: 0.5vh 3vh 0.5vh 3vh;
 }
 
+.column .contact-element a {
+    color: #F5F5F5;
+    text-decoration: none;
+}
+
 .column .about-me {
     text-align: justify;
     margin: 0vh 3vh 0vh 3vh;
@@ -87,13 +88,12 @@ body {
 
 
 
-
-
 /* MAIN */
 .main {
     max-width: 67%;
     padding-left: 5vh;
     padding-right: 3vh;
+    color:#212121;
 }
 
 .main a {
@@ -179,22 +179,22 @@ body {
     margin-bottom: 0.2rem;
 }
 
-.recommandations {
+.main .recommandations {
     display: flex;
     font-size: 0.80rem;
     margin-top: 1rem;
 }
 
-.recommandations .recommandations-item {
-    width: 45%;
-    margin: 0 5% 0 5%;
+.main .recommandations .recommandations-item {
+    width: 50%;
+    margin: 0 5% 0 0;
 }
 
-.recommandations .recommandations-item h5{
+.main .recommandations .recommandations-item h5{
     text-transform: uppercase;
     margin-bottom: 0.2rem;
 }
 
-.recommandations .recommandations-item p{
+.main .recommandations .recommandations-item p{
     font-size: 0.65rem;
 }
