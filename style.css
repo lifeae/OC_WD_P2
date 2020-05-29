@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color:#F5F5F5;
+    color:#212121;
+    font-family: 'Roboto', sans-serif;
+    word-wrap: break-word;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+@media screen and (max-width: 640px) {
+    .column {
+        min-width: 200px;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .column {
+        width: 264px;
+    }
+}
+
+/* COLUMN */
+.column {
+    max-width: 33%;
+    background-color: #424242;
+    color: #F5F5F5;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.70rem;
+}
+
+.column a {
+    color: #F5F5F5;
+    text-decoration: none;
+}
+
+.column img {
+    margin: 2rem 0 0 0;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50rem;
+    border-color: #FF9800;
+    border-style: solid;
+    border-width: 3px;
+    align-self: center;
+}
+.column h2 {
+    background-color: #212121;
+    color: #FF9800;
+    text-align: center;
+    margin: 3vh 0 3vh 0;
+    padding: 3px 0 3px 0;
+}
+
+.column .contact-element {
+    text-align: justify;
+    margin: 0.5vh 3vh 0.5vh 3vh;
+}
+
+.column .about-me {
+    text-align: justify;
+    margin: 0vh 3vh 0vh 3vh;
+}
+
+.column .loisirs {
+    margin-top:auto;
+}
+
+.column .loisirs i {
+    border-radius: 50rem;
+    border-style: solid;
+    margin: 0 5px 2rem 5px;
+    padding: 10px;
+    font-size: 2vh;
+}
+
+
+
+
+
+/* MAIN */
+.main {
+    max-width: 67%;
+    padding-left: 5vh;
+    padding-right: 3vh;
+}
+
+.main a {
+    color: #212121;
+    text-decoration: none;
+}
+
+.main hr {
+    border: solid;
+    border-color: #FF9800;
+    border-width: 1px;
+}
+
+.main .little-bar {
+    width: 8vh;
+    margin-bottom: 9vh;
+}
+
+.main h1 {
+    font-size: 2rem;
+    margin-top: 6vh;
+}
+
+.main h1 .first-name {
+    color: #FF9800;
+}
+
+.main h2 {
+    font-size: 1rem;
+}
+
+.main .header h2 {
+    color: #212121;
+}
+
+.main .header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1vh;
+    margin-top: 1vh;
+}
+
+.main .header i {
+    color: #FF9800;
+    margin-right: 3vh;
+    font-size: 1.5rem;
+}
+
+.main .item {
+    display: flex;
+    font-size: 0.70rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.main .item .dot {
+    color: #FF9800;
+}
+
+.main .item .dot .fa-dot-circle {
+    font-size: 0.6rem;
+}
+
+.main .item .dot .fa-circle {
+    font-size: 0.4rem;
+}
+
+.main .item .place-period {
+    width: 33%;
+    margin-left: 3%;
+    font-size: 0.65rem;
+}
+
+.main .item .content {
+    width: 66%;
+}
+
+.main .item .content h3{
+    margin-bottom: 0.3rem;
+}
+
+.main .item .content p{
+    margin-bottom: 0.2rem;
+}
+
+.recommandations {
+    display: flex;
+    font-size: 0.80rem;
+    margin-top: 1rem;
+}
+
+.recommandations .recommandations-item {
+    width: 50%;
+}
+
+.recommandations .recommandations-item h5{
+    text-transform: uppercase;
+    margin-bottom: 0.2rem;
+}
+
+.recommandations .recommandations-item p{
+    font-size: 0.65rem;
+}
