@@ -1,48 +1,142 @@
+/* DOCUMENT */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-.container {
-    display: flex;
-    min-height: 100vh;
-    min-width: 100vh;
     font-family: 'Roboto', sans-serif;
     word-wrap: break-word;
+}
+
+/* MOBILE FIRST - @media screen and (max-width: 576px) */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background-color:#F5F5F5;
 }
 
-
-
-/* MEDIA QUERIES */ 
-@media screen and (max-width: 640px) {
-    .column {
-        min-width: 200px;
-    }
+/* MAIN */
+main {
+    color:#212121;
 }
 
-@media screen and (min-width: 800px) {
-    .column {
-        width: 264px;
-    }
-}
-
-
-
-/* COLUMN */
-.column {
-    max-width: 33%;
-    background-color: #424242;
-    color: #F5F5F5;
-    text-align: center;
+main header,
+main section,
+main article,
+main article .dot-place-period,
+main article .recommandations,
+main article .item {
     display: flex;
     flex-direction: column;
+    text-align: center
+}
+
+main header h1 {
+    font-size: 2rem;
+    margin-top: 6vh;
+}
+
+main header h1 .first-name {
+    color: #FF9800;
+}
+
+main header .little-bar hr{
+    width: 8vh;
+    margin: auto;
+    margin-bottom: 9vh;
+    border: solid;
+    border-color: #FF9800;
+    border-width: 1px;
+}
+
+main header h2,
+main article .header {
+    font-size: 1rem;
+}
+
+main article .header {
+    margin-bottom: 1vh;
+    margin-top: 1vh;
+}
+
+main article .header i {
+    color: #FF9800;
+    font-size: 1.5rem;
+}
+
+main article hr {
+    border: solid;
+    border-color: #FF9800;
+    border-width: 1px;
+}
+
+main article .item {
+    font-size: 0.70rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+main article .item .fa-dot-circle,
+main article .item .fa-circle {
+    color: #FF9800;
+}
+
+main article .item .dot .fa-dot-circle {
+    font-size: 0.6rem;
+}
+
+main article .item .dot .fa-circle {
+    font-size: 0.4rem;
+}
+
+main article .item .place-period {
+    font-size: 0.65rem;
+}
+
+main article .item .content h3{
+    margin-bottom: 0.3rem;
+}
+
+main article .item .content p{
+    margin-bottom: 0.2rem;
+}
+
+main article .recommandations {
+    font-size: 0.80rem;
+    margin-top: 1rem;
+}
+
+main article .recommandations .recommandations-item {
+    margin-bottom: 2%;
+}
+
+main article .recommandations .recommandations-item h5{
+    text-transform: uppercase;
+    margin-bottom: 0.2rem;
+}
+
+main article .recommandations .recommandations-item p{
+    font-size: 0.65rem;
+}
+
+main article .recommandations .recommandations-item p a {
+    color: #212121;
+    text-decoration: none;
+}
+
+/* LE FRONT */
+
+aside {
+    background-color: #424242;
+    color: #F5F5F5;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
     font-size: 0.70rem;
 }
 
-.column img {
-    margin: 2rem 0 0 0;
+aside img {
+    margin-top: 2rem;
     width: 10rem;
     height: 10rem;
     border-radius: 50rem;
@@ -51,150 +145,116 @@
     border-width: 3px;
     align-self: center;
 }
-.column h2 {
+aside article h2 {
     background-color: #212121;
     color: #FF9800;
-    text-align: center;
-    margin: 3vh 0 3vh 0;
-    padding: 3px 0 3px 0;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    padding-top: 3px;
+    padding-bottom: 3px;
 }
 
-.column .contact-element {
-    text-align: justify;
-    margin: 0.5vh 3vh 0.5vh 3vh;
+aside article .contact-element {
+    margin-top: 0.5vh;
+    margin-bottom: 0.5vh;
 }
 
-.column .contact-element a {
+aside article .contact-element a {
     color: #F5F5F5;
     text-decoration: none;
 }
 
-.column .about-me {
-    text-align: justify;
-    margin: 0vh 3vh 0vh 3vh;
+aside article .about-me {
+    text-align: center;
+    margin: 3vh;
 }
 
-.column .loisirs {
-    margin-top:auto;
-}
-
-.column .loisirs i {
+aside article .loisirs-icons i {
     border-radius: 50rem;
     border-style: solid;
-    margin: 0 5px 2rem 5px;
+    margin-bottom: 3vh;
+    margin-left: 1vh;
+    margin-right: 1vh;
     padding: 10px;
-    font-size: 2vh;
+    font-size: 1em;
 }
 
+/* MEDIA QUERIES */
+@media (min-width: 576px) {
+    main {
+        margin-left: 3vh;
+        margin-right: 3vh;
+    }
 
+    main article .item,
+    main article .item .dot-place-period {
+        flex-direction: row;
+    }
 
-/* MAIN */
-.main {
-    max-width: 67%;
-    padding-left: 5vh;
-    padding-right: 3vh;
-    color:#212121;
+    main article .item .dot-place-period,
+    main article .item .content {
+        text-align: justify;
+    }
+
+    main article .item .dot-place-period {
+        width: 33%;
+    }
+
+    main article .item .content {
+        width: 66%;
+    }
+    main article .item .dot-place-period i {
+        margin-right: 1em;
+    }
+
+    main article .recommandations {
+        flex-direction: row;
+    }
+    main article .recommandations .recommandations-item {
+        width: 50%;
+    }
 }
 
-.main a {
-    color: #212121;
-    text-decoration: none;
+@media (min-width: 768px) {
+    body {
+        flex-direction: row-reverse;
+    }
+    
+    aside {
+        width: 33%;
+    }
+
+    aside article .contact-element,
+    aside article .about-me {
+        text-align: justify;
+        margin-left: 3vh;
+        margin-right: 3vh;
+    }
+
+    main header {
+        align-items: flex-start;
+    }
+
+    main article .header {
+        display: flex;
+        flex-direction: row;
+    }
+
+    main article .header i {
+        margin-right: 1em;
+    }
+
+    main article .recommandations {
+        margin-bottom: 2em;
+    }
+
+    main article .recommandations .recommandations-item {
+        text-align: justify;
+    }
 }
 
-.main hr {
-    border: solid;
-    border-color: #FF9800;
-    border-width: 1px;
-}
-
-.main .little-bar {
-    width: 8vh;
-    margin-bottom: 9vh;
-}
-
-.main h1 {
-    font-size: 2rem;
-    margin-top: 6vh;
-}
-
-.main h1 .first-name {
-    color: #FF9800;
-}
-
-.main h2 {
-    font-size: 1rem;
-}
-
-.main .header h2 {
-    color: #212121;
-}
-
-.main .header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1vh;
-    margin-top: 1vh;
-}
-
-.main .header i {
-    color: #FF9800;
-    margin-right: 3vh;
-    font-size: 1.5rem;
-}
-
-.main .item {
-    display: flex;
-    font-size: 0.70rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
-
-.main .item .dot {
-    color: #FF9800;
-}
-
-.main .item .dot .fa-dot-circle {
-    font-size: 0.6rem;
-}
-
-.main .item .dot .fa-circle {
-    font-size: 0.4rem;
-}
-
-.main .item .place-period {
-    width: 33%;
-    margin-left: 3%;
-    font-size: 0.65rem;
-}
-
-.main .item .content {
-    width: 66%;
-}
-
-.main .item .content h3{
-    margin-bottom: 0.3rem;
-}
-
-.main .item .content p{
-    margin-bottom: 0.2rem;
-}
-
-.main .recommandations {
-    display: flex;
-    font-size: 0.80rem;
-    margin-top: 1rem;
-}
-
-.main .recommandations .recommandations-item {
-    width: 50%;
-    margin: 0 5% 0 0;
-}
-
-.main .recommandations .recommandations-item h5{
-    text-transform: uppercase;
-    margin-bottom: 0.2rem;
-}
-
-.main .recommandations .recommandations-item p{
-    font-size: 0.65rem;
+@media (min-width: 992px) {
+    aside {
+        width: 328px;
+    }
 }
